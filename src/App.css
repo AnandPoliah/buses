@@ -1,0 +1,73 @@
+/* src/App.css */
+
+/* 1. DEFAULT (LIGHT MODE) */
+/* We use the values from your 'body.light-mode' snippet here */
+:root {
+  --primary-blue: #6366f1; /* Your Primary (Indigo) */
+  --primary-hover: #4f46e5; /* Your Hover */
+
+  --accent-orange: #f59e0b; /* Mapped to your 'med' (Amber) for consistency */
+
+  /* Backgrounds */
+  --bg-main: #f3f4f6; /* Your light bg */
+  --bg-card: #ffffff; /* Your light surface */
+  --bg-input: #ffffff; /* Your light input */
+
+  /* Text */
+  --text-main: #1e293b; /* Your light text */
+  --text-secondary: #64748b; /* Your light muted */
+
+  /* Borders */
+  --border-color: #e2e8f0; /* Your light border */
+
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. DARK MODE OVERRIDES */
+/* We use the values from your ':root' snippet here */
+body.dark-mode {
+  --primary-blue: #6366f1 !important;
+  --primary-hover: #4f46e5 !important;
+
+  --accent-orange: #f59e0b !important;
+
+  /* Backgrounds: The Rich "Slate" Palette */
+  --bg-main: #0f172a !important; /* Slate 900 */
+  --bg-card: #1e293b !important; /* Slate 800 */
+  --bg-input: #020617 !important; /* Slate 950 */
+
+  /* Text */
+  --text-main: #f1f5f9 !important; /* Slate 100 */
+  --text-secondary: #94a3b8 !important; /* Slate 400 */
+
+  /* Borders */
+  --border-color: #334155 !important; /* Slate 700 */
+
+  --shadow-sm: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+/* GLOBAL RESET & TRANSITIONS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  /* Smooth transition for all colors when toggling theme */
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+}
+
+/* Helper Class for Inputs to use the specific input bg */
+input,
+select,
+textarea {
+  background-color: var(--bg-input);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}

@@ -1,0 +1,577 @@
+{
+  "meta": {
+    "version": 4.0,
+    "description": "High volume test data for BusBooker",
+    "lastUpdated": "2025-12-12T10:00:00Z"
+  },
+  "routes": [
+    {
+      "routeId": "R001",
+      "source": "Chennai",
+      "destination": "Coimbatore",
+      "distance": 505,
+      "duration": "8h 30m",
+      "baseFare": 850
+    },
+    {
+      "routeId": "R002",
+      "source": "Chennai",
+      "destination": "Madurai",
+      "distance": 460,
+      "duration": "7h 45m",
+      "baseFare": 750
+    },
+    {
+      "routeId": "R003",
+      "source": "Coimbatore",
+      "destination": "Chennai",
+      "distance": 505,
+      "duration": "8h 30m",
+      "baseFare": 850
+    },
+    {
+      "routeId": "R004",
+      "source": "Trichy",
+      "destination": "Chennai",
+      "distance": 330,
+      "duration": "5h 30m",
+      "baseFare": 550
+    },
+    {
+      "routeId": "R005",
+      "source": "Madurai",
+      "destination": "Bangalore",
+      "distance": 430,
+      "duration": "7h 00m",
+      "baseFare": 980
+    },
+    {
+      "routeId": "R006",
+      "source": "Hyderabad",
+      "destination": "Mumbai",
+      "distance": 710,
+      "duration": "12h 00m",
+      "baseFare": 1500
+    },
+    {
+      "routeId": "R007",
+      "source": "Coimbatore",
+      "destination": "Bangalore",
+      "distance": 365,
+      "duration": "6h 15m",
+      "baseFare": 780
+    },
+    {
+      "routeId": "R008",
+      "source": "Bangalore",
+      "destination": "Chennai",
+      "distance": 350,
+      "duration": "6h 00m",
+      "baseFare": 700
+    },
+    {
+      "routeId": "R009",
+      "source": "Chennai",
+      "destination": "Bangalore",
+      "distance": 350,
+      "duration": "6h 00m",
+      "baseFare": 700
+    },
+    {
+      "routeId": "R010",
+      "source": "Kochi",
+      "destination": "Bangalore",
+      "distance": 550,
+      "duration": "10h 30m",
+      "baseFare": 1200
+    }
+  ],
+  "buses": [
+    {
+      "busId": "B101",
+      "name": "Parveen Travels",
+      "totalSeats": 24,
+      "seatType": "AC Sleeper",
+      "amenities": ["AC", "Water Bottle", "Blanket", "WiFi"]
+    },
+    {
+      "busId": "B102",
+      "name": "KPN Travels",
+      "totalSeats": 36,
+      "seatType": "Non-AC Seater",
+      "amenities": ["Charging Point", "TV"]
+    },
+    {
+      "busId": "B103",
+      "name": "SRM Transports",
+      "totalSeats": 40,
+      "seatType": "Volvo Multi-Axle",
+      "amenities": ["AC", "Water Bottle", "WiFi", "TV", "Toilet"]
+    },
+    {
+      "busId": "B104",
+      "name": "Kallada Tours",
+      "totalSeats": 20,
+      "seatType": "Premium AC Sleeper",
+      "amenities": ["AC", "Blanket", "Personal Screen", "Lounge Access"]
+    },
+    {
+      "busId": "B105",
+      "name": "VRL Logistics",
+      "totalSeats": 30,
+      "seatType": "Non-AC Sleeper",
+      "amenities": ["Water Bottle", "Blanket"]
+    },
+    {
+      "busId": "B106",
+      "name": "Jabbar Travels",
+      "totalSeats": 42,
+      "seatType": "Scania AC Seater",
+      "amenities": ["AC", "WiFi", "Charging Point"]
+    },
+    {
+      "busId": "B107",
+      "name": "Orange Tours",
+      "totalSeats": 24,
+      "seatType": "AC Sleeper",
+      "amenities": ["AC", "Water Bottle", "Blanket", "Reading Light"]
+    },
+    {
+      "busId": "B108",
+      "name": "IntrCity SmartBus",
+      "totalSeats": 36,
+      "seatType": "AC Seater/Sleeper",
+      "amenities": ["AC", "WiFi", "Track My Bus", "Water Bottle"]
+    }
+  ],
+  "schedules": [
+    {
+      "scheduleId": "S1",
+      "routeId": "R001",
+      "busId": "B101",
+      "departureDate": "2025-12-15",
+      "departureTime": "21:30",
+      "arrivalTime": "06:00",
+      "status": "Active",
+      "fareMultiplier": 1.2
+    },
+    {
+      "scheduleId": "S2",
+      "routeId": "R001",
+      "busId": "B102",
+      "departureDate": "2025-12-15",
+      "departureTime": "20:00",
+      "arrivalTime": "05:00",
+      "status": "Active",
+      "fareMultiplier": 0.9
+    },
+    {
+      "scheduleId": "S3",
+      "routeId": "R002",
+      "busId": "B103",
+      "departureDate": "2025-12-15",
+      "departureTime": "22:00",
+      "arrivalTime": "05:45",
+      "status": "Active",
+      "fareMultiplier": 1.5
+    },
+    {
+      "scheduleId": "S4",
+      "routeId": "R003",
+      "busId": "B104",
+      "departureDate": "2025-12-15",
+      "departureTime": "18:00",
+      "arrivalTime": "02:30",
+      "status": "Active",
+      "fareMultiplier": 1.1
+    },
+    {
+      "scheduleId": "S5",
+      "routeId": "R007",
+      "busId": "B105",
+      "departureDate": "2025-12-16",
+      "departureTime": "09:00",
+      "arrivalTime": "15:15",
+      "status": "Active",
+      "fareMultiplier": 1.0
+    },
+    {
+      "scheduleId": "S6",
+      "routeId": "R006",
+      "busId": "B101",
+      "departureDate": "2025-12-16",
+      "departureTime": "16:00",
+      "arrivalTime": "04:00",
+      "status": "Active",
+      "fareMultiplier": 1.3
+    },
+    {
+      "scheduleId": "S7",
+      "routeId": "R001",
+      "busId": "B103",
+      "departureDate": "2025-12-16",
+      "departureTime": "23:00",
+      "arrivalTime": "07:30",
+      "status": "Active",
+      "fareMultiplier": 1.4
+    },
+    {
+      "scheduleId": "S8",
+      "routeId": "R009",
+      "busId": "B108",
+      "departureDate": "2025-12-16",
+      "departureTime": "06:00",
+      "arrivalTime": "12:00",
+      "status": "Active",
+      "fareMultiplier": 1.1
+    },
+    {
+      "scheduleId": "S9",
+      "routeId": "R009",
+      "busId": "B106",
+      "departureDate": "2025-12-16",
+      "departureTime": "14:00",
+      "arrivalTime": "20:00",
+      "status": "Active",
+      "fareMultiplier": 1.0
+    },
+    {
+      "scheduleId": "S10",
+      "routeId": "R010",
+      "busId": "B107",
+      "departureDate": "2025-12-17",
+      "departureTime": "19:00",
+      "arrivalTime": "05:30",
+      "status": "Active",
+      "fareMultiplier": 1.2
+    },
+    {
+      "scheduleId": "S11",
+      "routeId": "R001",
+      "busId": "B101",
+      "departureDate": "2025-12-17",
+      "departureTime": "21:30",
+      "arrivalTime": "06:00",
+      "status": "Active",
+      "fareMultiplier": 1.2
+    },
+    {
+      "scheduleId": "S12",
+      "routeId": "R005",
+      "busId": "B102",
+      "departureDate": "2025-12-17",
+      "departureTime": "22:15",
+      "arrivalTime": "05:15",
+      "status": "Active",
+      "fareMultiplier": 0.9
+    },
+    {
+      "scheduleId": "S13",
+      "routeId": "R008",
+      "busId": "B108",
+      "departureDate": "2025-12-18",
+      "departureTime": "23:00",
+      "arrivalTime": "05:00",
+      "status": "Active",
+      "fareMultiplier": 1.1
+    },
+    {
+      "scheduleId": "S14",
+      "routeId": "R004",
+      "busId": "B105",
+      "departureDate": "2025-12-18",
+      "departureTime": "10:00",
+      "arrivalTime": "15:30",
+      "status": "Active",
+      "fareMultiplier": 0.8
+    },
+    {
+      "scheduleId": "S15",
+      "routeId": "R001",
+      "busId": "B103",
+      "departureDate": "2025-12-18",
+      "departureTime": "22:00",
+      "arrivalTime": "06:30",
+      "status": "Active",
+      "fareMultiplier": 1.4
+    }
+  ],
+  "bookings": [
+    {
+      "bookingId": "BK_TN_001",
+      "scheduleId": "S1",
+      "customerId": "CUST001",
+      "customerName": "Ravi Kumar",
+      "seatsBooked": ["1A", "1B"],
+      "totalFare": 2040,
+      "status": "Confirmed",
+      "passengerDetails": [
+        { "seatNumber": "1A", "name": "Ravi Kumar", "age": "32", "gender": "Male" },
+        { "seatNumber": "1B", "name": "Anjali Kumar", "age": "28", "gender": "Female" }
+      ]
+    },
+    {
+      "bookingId": "BK_TN_002",
+      "scheduleId": "S1",
+      "customerId": "CUST002",
+      "customerName": "Priya S",
+      "seatsBooked": ["2C"],
+      "totalFare": 1020,
+      "status": "Confirmed",
+      "passengerDetails": [
+        { "seatNumber": "2C", "name": "Priya S", "age": "24", "gender": "Female" }
+      ]
+    },
+    {
+      "bookingId": "BK_TN_003",
+      "scheduleId": "S1",
+      "customerId": "CUST003",
+      "customerName": "Anand V",
+      "seatsBooked": ["4A", "4B", "4C"],
+      "totalFare": 3060,
+      "status": "Confirmed",
+      "passengerDetails": [
+        { "seatNumber": "4A", "name": "Anand V", "age": "45", "gender": "Male" },
+        { "seatNumber": "4B", "name": "Sumathi V", "age": "40", "gender": "Female" },
+        { "seatNumber": "4C", "name": "Rohan V", "age": "12", "gender": "Male" }
+      ]
+    },
+    {
+      "bookingId": "BK_TN_004",
+      "scheduleId": "S2",
+      "customerId": "CUST004",
+      "customerName": "Deepika M",
+      "seatsBooked": ["1D", "2D"],
+      "totalFare": 1350,
+      "status": "Confirmed",
+      "passengerDetails": [
+        { "seatNumber": "1D", "name": "Deepika M", "age": "29", "gender": "Female" },
+        { "seatNumber": "2D", "name": "Karthik R", "age": "31", "gender": "Male" }
+      ]
+    },
+    {
+      "bookingId": "BK_TN_005",
+      "scheduleId": "S2",
+      "customerId": "CUST001",
+      "customerName": "Ravi Kumar",
+      "seatsBooked": ["3A"],
+      "totalFare": 675,
+      "status": "Cancelled",
+      "passengerDetails": [
+        { "seatNumber": "3A", "name": "Ravi Kumar", "age": "32", "gender": "Male" }
+      ]
+    },
+    {
+      "bookingId": "BK_TN_006",
+      "scheduleId": "S3",
+      "customerId": "CUST005",
+      "customerName": "Gopal N",
+      "seatsBooked": ["5C", "6C", "6D"],
+      "totalFare": 3375,
+      "status": "Confirmed",
+      "passengerDetails": [
+        { "seatNumber": "5C", "name": "Gopal N", "age": "55", "gender": "Male" },
+        { "seatNumber": "6C", "name": "Lakshmi N", "age": "50", "gender": "Female" },
+        { "seatNumber": "6D", "name": "Rahul N", "age": "22", "gender": "Male" }
+      ]
+    },
+    {
+      "bookingId": "BK_TN_007",
+      "scheduleId": "S4",
+      "customerId": "CUST006",
+      "customerName": "Harish P",
+      "seatsBooked": ["1A", "1B"],
+      "totalFare": 1870,
+      "status": "Confirmed",
+      "passengerDetails": [
+        { "seatNumber": "1A", "name": "Harish P", "age": "35", "gender": "Male" },
+        { "seatNumber": "1B", "name": "Swetha H", "age": "32", "gender": "Female" }
+      ]
+    },
+    {
+      "bookingId": "BK_TN_008",
+      "scheduleId": "S5",
+      "customerId": "CUST007",
+      "customerName": "Isha T",
+      "seatsBooked": ["10", "11"],
+      "totalFare": 1560,
+      "status": "Pending",
+      "passengerDetails": [
+        { "seatNumber": "10", "name": "Isha T", "age": "26", "gender": "Female" },
+        { "seatNumber": "11", "name": "Meera K", "age": "25", "gender": "Female" }
+      ]
+    },
+    {
+      "bookingId": "BK_TN_009",
+      "scheduleId": "S5",
+      "customerId": "CUST008",
+      "customerName": "Jeeva R",
+      "seatsBooked": ["12", "13", "14"],
+      "totalFare": 2340,
+      "status": "Confirmed",
+      "passengerDetails": [
+        { "seatNumber": "12", "name": "Jeeva R", "age": "28", "gender": "Male" },
+        { "seatNumber": "13", "name": "Suresh K", "age": "29", "gender": "Male" },
+        { "seatNumber": "14", "name": "Mani P", "age": "28", "gender": "Male" }
+      ]
+    },
+    {
+      "bookingId": "BK_TN_010",
+      "scheduleId": "S6",
+      "customerId": "CUST009",
+      "customerName": "Kavya L",
+      "seatsBooked": ["10A"],
+      "totalFare": 1950,
+      "status": "Cancelled",
+      "passengerDetails": [
+        { "seatNumber": "10A", "name": "Kavya L", "age": "30", "gender": "Female" }
+      ]
+    },
+    {
+      "bookingId": "BK_TN_011",
+      "scheduleId": "S8",
+      "customerId": "CUST010",
+      "customerName": "Mohammed Ali",
+      "seatsBooked": ["3", "4"],
+      "totalFare": 1540,
+      "status": "Confirmed",
+      "passengerDetails": [
+        { "seatNumber": "3", "name": "Mohammed Ali", "age": "42", "gender": "Male" },
+        { "seatNumber": "4", "name": "Zara Ali", "age": "38", "gender": "Female" }
+      ]
+    },
+    {
+      "bookingId": "BK_TN_012",
+      "scheduleId": "S8",
+      "customerId": "CUST011",
+      "customerName": "Sarah Jones",
+      "seatsBooked": ["7"],
+      "totalFare": 770,
+      "status": "Confirmed",
+      "passengerDetails": [
+        { "seatNumber": "7", "name": "Sarah Jones", "age": "27", "gender": "Female" }
+      ]
+    },
+    {
+      "bookingId": "BK_TN_013",
+      "scheduleId": "S9",
+      "customerId": "CUST012",
+      "customerName": "Vikram S",
+      "seatsBooked": ["20", "21", "22", "23"],
+      "totalFare": 2800,
+      "status": "Confirmed",
+      "passengerDetails": [
+        { "seatNumber": "20", "name": "Vikram S", "age": "33", "gender": "Male" },
+        { "seatNumber": "21", "name": "Arun S", "age": "30", "gender": "Male" },
+        { "seatNumber": "22", "name": "Balaji S", "age": "35", "gender": "Male" },
+        { "seatNumber": "23", "name": "Chandru S", "age": "32", "gender": "Male" }
+      ]
+    },
+    {
+      "bookingId": "BK_TN_014",
+      "scheduleId": "S10",
+      "customerId": "CUST013",
+      "customerName": "Nancy Paul",
+      "seatsBooked": ["2A", "2B"],
+      "totalFare": 2880,
+      "status": "Confirmed",
+      "passengerDetails": [
+        { "seatNumber": "2A", "name": "Nancy Paul", "age": "29", "gender": "Female" },
+        { "seatNumber": "2B", "name": "David Paul", "age": "31", "gender": "Male" }
+      ]
+    }
+  ],
+  "customers": [
+    {
+      "customerId": "CUST001",
+      "name": "Ravi Kumar",
+      "phone": "9876543210",
+      "email": "ravi@demo.com",
+      "lifetimeBookings": 6
+    },
+    {
+      "customerId": "CUST002",
+      "name": "Priya S",
+      "phone": "9123456789",
+      "email": "priya@demo.com",
+      "lifetimeBookings": 2
+    },
+    {
+      "customerId": "CUST003",
+      "name": "Anand V",
+      "phone": "9000011111",
+      "email": "anand@demo.com",
+      "lifetimeBookings": 1
+    },
+    {
+      "customerId": "CUST004",
+      "name": "Deepika M",
+      "phone": "9222233333",
+      "email": "deepika@demo.com",
+      "lifetimeBookings": 3
+    },
+    {
+      "customerId": "CUST005",
+      "name": "Gopal N",
+      "phone": "9444455555",
+      "email": "gopal@demo.com",
+      "lifetimeBookings": 1
+    },
+    {
+      "customerId": "CUST006",
+      "name": "Harish P",
+      "phone": "9666677777",
+      "email": "harish@demo.com",
+      "lifetimeBookings": 2
+    },
+    {
+      "customerId": "CUST007",
+      "name": "Isha T",
+      "phone": "9888899999",
+      "email": "isha@demo.com",
+      "lifetimeBookings": 1
+    },
+    {
+      "customerId": "CUST008",
+      "name": "Jeeva R",
+      "phone": "9012345678",
+      "email": "jeeva@demo.com",
+      "lifetimeBookings": 4
+    },
+    {
+      "customerId": "CUST009",
+      "name": "Kavya L",
+      "phone": "9234567890",
+      "email": "kavya@demo.com",
+      "lifetimeBookings": 1
+    },
+    {
+      "customerId": "CUST010",
+      "name": "Mohammed Ali",
+      "phone": "9988776655",
+      "email": "ali@demo.com",
+      "lifetimeBookings": 5
+    },
+    {
+      "customerId": "CUST011",
+      "name": "Sarah Jones",
+      "phone": "8877665544",
+      "email": "sarah@demo.com",
+      "lifetimeBookings": 2
+    },
+    {
+      "customerId": "CUST012",
+      "name": "Vikram S",
+      "phone": "7766554433",
+      "email": "vikram@demo.com",
+      "lifetimeBookings": 8
+    },
+    {
+      "customerId": "CUST013",
+      "name": "Nancy Paul",
+      "phone": "6655443322",
+      "email": "nancy@demo.com",
+      "lifetimeBookings": 3
+    }
+  ]
+}

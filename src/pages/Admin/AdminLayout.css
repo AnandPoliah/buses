@@ -1,0 +1,183 @@
+/* src/pages/Admin/AdminLayout.css */
+
+/* 1. THE CONTAINER */
+.admin-container {
+  display: flex;
+  /* Force the container to take exactly the full screen height */
+  height: 100vh;
+  /* Prevent the browser window itself from scrolling */
+  overflow: hidden;
+  background-color: #f4f6f8;
+}
+
+/* 2. THE SIDEBAR (Fixed Left) */
+.admin-sidebar {
+  width: 260px;
+  background-color: #1a202c; /* Dark Sidebar */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  /* Prevent sidebar from shrinking if screen is small */
+  flex-shrink: 0;
+  /* If the menu items are too long, scroll ONLY the sidebar */
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #ff6b4a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  color: #a0aec0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+  background-color: #2d3748;
+  color: white;
+}
+
+.sidebar-link span {
+  font-size: 20px;
+}
+
+/* 3. THE CONTENT AREA (Scrollable Right) */
+.admin-content {
+  flex: 1; /* Take remaining width */
+  padding: 20px;
+  /* THIS IS THE MAGIC: */
+  /* Make only this right side scrollable */
+  overflow-y: auto;
+  /* Ensure it fills the height of the parent */
+  height: 100%;
+  position: relative;
+}
+
+/* OPTIONAL: Sticky Header inside the content */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  top: 0;
+  background-color: #f4f6f8; /* Match bg to cover scrolling text */
+  z-index: 10;
+  padding-bottom: 10px;
+}
+
+.admin-header h1 {
+  font-size: 24px;
+  color: #2d3748;
+}
+
+.btn-logout {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #e53e3e;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  background-color: #fff5f5;
+}
+
+/* --- SHARED PAGINATION STYLES --- */
+
+/* Wrapper to spread items apart */
+.pagination-container {
+  display: flex;
+  justify-content: space-between; /* Pushes Selector to left, Buttons to right */
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color); /* Separator line */
+}
+
+/* Grouping the buttons together */
+.page-nav-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.rows-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* The "Rows per page" dropdown style */
+.pagination-select {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Button Styles */
+.btn-page {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-page:hover:not(:disabled) {
+  background-color: var(--bg-main);
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+.btn-page:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--bg-main);
+}
+
+.page-indicator {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.page-indicator b {
+  color: var(--text-main);
+}

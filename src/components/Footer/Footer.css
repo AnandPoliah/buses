@@ -1,0 +1,124 @@
+/* src/components/Footer/Footer.css */
+
+/* * NOTE: The following CSS assumes you have CSS Variables defined 
+ * in a global stylesheet (or the body element) for colors, 
+ * such as: --primary-blue, --bg-card, --text-main, --text-secondary, --border-color.
+ */
+
+.footer {
+  /* Default (Light Mode) - Use a dark, professional background */
+  background-color: #1f2a44;
+  color: #ffffff;
+  padding: 60px 0 30px 0; /* Generous padding */
+  margin-top: auto; /* Ensures footer stays at the bottom of the page */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- DARK MODE OVERRIDE --- */
+/* Switch background to match the application's dark theme */
+body.dark-mode .footer {
+  background-color: var(--bg-card); /* e.g., A dark gray color */
+  border-top: 2px solid var(--border-color);
+  color: var(--text-main); /* Light text color */
+}
+
+/* --- CONTAINER & LAYOUT (CSS GRID) --- */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  /* Use fixed grid for better control: 3 columns */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+/* --- SECTION HEADERS --- */
+.footer-section h4 {
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: var(--primary-blue); /* Use the brand color for contrast */
+  font-weight: 700;
+}
+
+/* --- SECTION TEXT --- */
+.footer-section p {
+  color: #b0b8c4; /* Light gray text for readability on dark background */
+  line-height: 1.8;
+  font-size: 14px;
+}
+/* Adjust paragraph color for dark mode background (if different from #1f2a44) */
+body.dark-mode .footer-section p {
+  color: var(--text-secondary);
+}
+
+/* --- LINKS --- */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #b0b8c4;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 15px;
+  display: block;
+}
+/* Ensure link color changes correctly in dark mode */
+body.dark-mode .footer-links a {
+  color: var(--text-secondary);
+}
+
+.footer-links a:hover {
+  color: #ffffff; /* Brighter white/light color on hover */
+  text-decoration: underline;
+}
+/* Adjust hover color to primary brand color in dark mode */
+body.dark-mode .footer-links a:hover {
+  color: var(--primary-blue);
+}
+
+/* --- CONTACT INFORMATION COLUMN --- */
+.footer-contact-info p {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-contact-info .contact-icon {
+  font-size: 20px;
+  color: var(--primary-blue);
+  margin-top: 2px;
+}
+
+/* --- FOOTER BOTTOM (Copyright) --- */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white line */
+  color: #6c757d; /* Muted gray for copyright text */
+  font-size: 13px;
+}
+/* Adjust border/text color for dark mode background */
+body.dark-mode .footer-bottom {
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .footer-container {
+    /* Stack all columns vertically on mobile */
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+}

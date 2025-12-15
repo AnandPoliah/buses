@@ -1,0 +1,459 @@
+/* src/pages/Admin/Bookings/BookingManager.css */
+
+.booking-manager {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* HEADER */
+.bm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.header-title h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.badge-count {
+  font-size: 12px;
+  background: #e0e7ff;
+  color: #4338ca;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 300px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* MASTER TABLE */
+.table-container {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.master-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.master-table th {
+  background: #f8fafc;
+  padding: 15px;
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #64748b;
+  border-bottom: 1px solid #e2e8f0;
+  font-weight: 700;
+}
+
+.master-row {
+  cursor: pointer;
+  transition: background 0.1s;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.master-row:hover {
+  background: #f8fafc;
+}
+
+.master-row.expanded {
+  background: #f1f5f9;
+  border-bottom: none;
+}
+
+.master-row td {
+  padding: 15px;
+  color: #334155;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.expand-cell {
+  text-align: center;
+  color: #94a3b8;
+}
+
+.fw-bold {
+  font-weight: 700;
+  color: #1e293b;
+}
+.sub-text {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+.route-text {
+  font-weight: 600;
+  color: #4338ca;
+}
+.revenue-text {
+  font-family: monospace;
+  font-weight: 700;
+  color: #059669;
+}
+
+.occupancy-badge {
+  background: #f3f4f6;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.status-dot.active {
+  background: #10b981;
+}
+
+/* src/pages/Admin/Bookings/BookingManager.css */
+
+/* --- DETAIL ROW & NESTED TABLE --- */
+.detail-row td {
+  padding: 0 !important;
+  background: #f8fafc;
+}
+
+.nested-table-wrapper {
+  padding: 20px 40px;
+  border-left: 4px solid #6366f1;
+}
+
+.nested-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  table-layout: fixed; /* Respect COLGROUP widths */
+}
+
+/* NESTED HEADERS - CENTERED */
+.nested-table th {
+  background: #fff;
+  border-bottom: 2px solid #f1f5f9;
+  font-size: 11px;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+  padding: 12px 5px; /* Reduced side padding slightly */
+
+  /* FORCE CENTER ALIGNMENT */
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+/* NESTED DATA CELLS - CENTERED */
+.nested-table td {
+  padding: 12px 5px;
+  font-size: 13px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* FORCE CENTER ALIGNMENT */
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+.nested-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Remove any specific Left Alignments if they exist */
+.nested-table td.p-name,
+.nested-table th:nth-child(2) {
+  text-align: center !important; /* Override previous left-align */
+  padding-left: 5px;
+}
+/* PASSENGER ROW STYLING */
+.p-name {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.dim-line {
+  color: #e2e8f0;
+  font-weight: 300;
+  padding-left: 10px;
+}
+
+.mono-text {
+  font-family: monospace;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.seat-chip {
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.status-pill.confirmed {
+  background: #dcfce7;
+  color: #166534;
+}
+.status-pill.cancelled {
+  background: #fef2f2;
+  color: #dc2626;
+}
+.status-pill.pending {
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+/* LEGACY DATA ROW */
+.legacy-row td {
+  background-color: #fafafa;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* ACTION BUTTON */
+.btn-cancel-tiny {
+  background: white;
+  border: 1px solid #fca5a5;
+  color: #ef4444;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cancel-tiny:hover:not(:disabled) {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-cancel-tiny:disabled {
+  border-color: #e2e8f0;
+  color: #cbd5e0;
+  background: #f8fafc;
+  cursor: not-allowed;
+}
+
+.no-results {
+  padding: 40px;
+  text-align: center;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* ... existing table styles ... */
+
+/* --- TBODY STYLING (NEW) --- */
+
+/* Master Table Body */
+.master-table tbody {
+  background-color: white;
+  /* Ensures the body acts as a solid block */
+  position: relative;
+  z-index: 1;
+}
+
+/* Master Row Hover Fix */
+.master-table tbody tr.master-row:hover {
+  background-color: #f8fafc; /* Light gray on hover */
+}
+
+/* Selected/Expanded Row Styling */
+.master-table tbody tr.master-row.expanded {
+  background-color: #f1f5f9; /* Darker gray when open */
+  border-bottom: none; /* Remove border to merge with detail row */
+}
+
+/* Nested Table Body */
+.nested-table tbody {
+  background-color: white;
+}
+
+/* Nested Table Row Styling */
+.nested-table tbody tr {
+  transition: background-color 0.1s ease;
+}
+
+.nested-table tbody tr:hover {
+  background-color: #f8fafc; /* Subtle hover effect for passengers */
+}
+
+/* Fix for the last row border in nested table */
+.nested-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Legacy/Empty Data Row Styling */
+.legacy-row td {
+  background-color: #fafafa;
+  color: #94a3b8;
+  font-style: italic;
+  padding: 15px;
+  text-align: center;
+}
+/* --- NESTED TABLE CONTAINER --- */
+.nested-table-wrapper {
+  padding: 20px 40px;
+  background-color: #f8fafc; /* Matches detail row bg */
+  border-left: 4px solid #6366f1; /* Visual indicator line */
+}
+
+/* --- THE NESTED TABLE ITSELF --- */
+.nested-table {
+  width: 100%;
+  border-collapse: separate; /* Allows border-radius */
+  border-spacing: 0;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  table-layout: fixed; /* Respects the widths set in JSX */
+}
+
+/* --- NESTED HEADERS (Booking ID, Name, etc.) --- */
+.nested-table thead th {
+  background-color: #fff;
+  color: #64748b; /* Muted text color */
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 16px;
+  border-bottom: 2px solid #f1f5f9; /* Thicker border to separate head */
+  text-align: left;
+}
+
+/* --- NESTED BODY ROWS --- */
+.nested-table tbody tr {
+  transition: background-color 0.1s ease;
+  background-color: white;
+}
+
+/* Hover effect for passenger rows */
+.nested-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* --- NESTED CELLS (Data) --- */
+.nested-table td {
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #334155; /* Darker text for readability */
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Remove bottom border from the very last row */
+.nested-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- SPECIFIC CELL STYLING --- */
+
+/* Booking ID (Monospaced) */
+.nested-table .mono-text {
+  font-family: "Roboto Mono", monospace;
+  color: #6366f1; /* Primary Blue for ID */
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* Passenger Name */
+.nested-table .p-name {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Seat Badge */
+.nested-table .seat-chip {
+  display: inline-block;
+  background: #eff6ff;
+  color: #4338ca;
+  border: 1px solid #e0e7ff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Cancel Button Tiny */
+.btn-cancel-tiny {
+  background: white;
+  border: 1px solid #fee2e2;
+  color: #ef4444;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cancel-tiny:hover:not(:disabled) {
+  background: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}
+
+.btn-cancel-tiny:disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+  border-color: transparent;
+  cursor: not-allowed;
+}
