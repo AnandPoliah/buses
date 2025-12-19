@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react"; // Import useState
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { toast } from "react-toastify";
@@ -16,6 +16,9 @@ const loginSchema = yup.object().shape({
 const LoginPage = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
+
+  // State for toggling password visibility
+  const [showPassword, setShowPassword] = useState(false);
 
   const {
     register,
@@ -35,6 +38,10 @@ const LoginPage = () => {
     } else {
       toast.error("Invalid credentials. Please try again.");
     }
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -59,14 +66,27 @@ const LoginPage = () => {
 
           <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter password (admin only)"
-              {...register("password")}
-              className={errors.password ? "input-error" : ""}
-            />
-             {errors.password && (
+
+            {/* Password Wrapper for relative positioning */}
+            <div className="password-wrapper">
+              <input
+                type={showPassword ? "text" : "password"} // Dynamic type
+                id="password"
+                placeholder="Enter password"
+                {...register("password")}
+                className={errors.password ? "input-error" : ""}
+              />
+
+              {/* Google Material Icon Toggle */}
+              <span
+                className="material-symbols-outlined password-toggle-icon"
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? "visibility" : "visibility_off"}
+              </span>
+            </div>
+
+            {errors.password && (
               <p className="error-text">{errors.password.message}</p>
             )}
           </div>

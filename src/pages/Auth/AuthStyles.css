@@ -7,15 +7,11 @@
   align-items: center;
   min-height: 100vh;
   width: 100%;
-
-  /* Modern Gradient Background */
   background: linear-gradient(
     135deg,
     var(--bg-main) 0%,
     var(--primary-blue) 150%
   );
-
-  /* Optional: animated subtle pattern */
   background-size: 200% 200%;
   animation: gradientMove 15s ease infinite;
 }
@@ -32,19 +28,15 @@
   }
 }
 
-/* --- 2. The Form Card (Glassmorphism Lite) --- */
+/* --- 2. The Form Card --- */
 .auth-card {
-  background-color: var(--bg-card); /* White or Slate-800 */
+  background-color: var(--bg-card);
   padding: 40px;
   border-radius: 20px;
   width: 100%;
   max-width: 420px;
-
-  /* Deep shadow for "pop" effect */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
-
-  /* Border for Dark Mode definition */
   border: 1px solid var(--border-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -63,7 +55,7 @@
   letter-spacing: -0.5px;
 }
 
-/* --- 3. Inputs --- */
+/* --- 3. Inputs & Forms --- */
 .form-group {
   margin-bottom: 24px;
 }
@@ -76,6 +68,7 @@
   font-size: 14px;
 }
 
+/* Base Input Style */
 .form-group input {
   width: 100%;
   padding: 14px 16px;
@@ -86,18 +79,66 @@
   font-size: 15px;
   transition: all 0.2s ease;
   outline: none;
+  /* Box-sizing ensures padding doesn't break width */
+  box-sizing: border-box;
 }
 
 .form-group input:focus {
   border-color: var(--primary-blue);
-  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1); /* Soft glow ring */
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
 }
 
-/* Disabled Input Styling */
 .form-group input:disabled {
   opacity: 0.6;
   cursor: not-allowed;
-  background-color: var(--bg-main); /* Slightly darker than input bg */
+  background-color: var(--bg-main);
+}
+
+/* Error Text */
+.error-text {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 6px;
+  margin-left: 4px;
+}
+
+.input-error {
+  border-color: #ef4444 !important;
+}
+
+/* --- NEW: Password Toggle Styling --- */
+
+/* Wrapper to hold input and icon together */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Specific padding for password input so text doesn't hit the eye icon */
+.password-wrapper input {
+  padding-right: 45px;
+}
+
+/* The Eye Icon */
+.password-toggle-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 20px; /* Adjust based on preference */
+  user-select: none;
+  transition: color 0.2s ease;
+
+  /* Flex center just in case of font alignment issues */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle-icon:hover {
+  color: var(--primary-blue);
 }
 
 /* --- 4. Main Action Button --- */
@@ -126,6 +167,12 @@
   transform: translateY(0);
 }
 
+.auth-button:disabled {
+  background-color: var(--text-secondary);
+  cursor: not-allowed;
+  transform: none;
+}
+
 /* --- 5. Footer Links --- */
 .auth-footer {
   text-align: center;
@@ -143,37 +190,4 @@
 
 .auth-footer a:hover {
   text-decoration: underline;
-}
-
-/* --- 6. Status Messages --- */
-.message-box {
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  margin-top: 15px;
-  text-align: center;
-  animation: fadeIn 0.3s ease;
-}
-
-.message-box.error {
-  background-color: rgba(239, 68, 68, 0.1); /* Red-500 transparent */
-  color: #ef4444;
-  border: 1px solid rgba(239, 68, 68, 0.2);
-}
-
-.message-box.success {
-  background-color: rgba(34, 197, 94, 0.1); /* Green-500 transparent */
-  color: #22c55e;
-  border: 1px solid rgba(34, 197, 94, 0.2);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
