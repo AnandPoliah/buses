@@ -88,7 +88,6 @@ const SearchResults = () => {
 
   const getAmenityIcon = (amenity) => {
     const map = {
-      AC: "ac_unit",
       "Water Bottle": "water_drop",
       "Charging Point": "battery_charging_full",
       Blanket: "bed",

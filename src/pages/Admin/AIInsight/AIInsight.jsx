@@ -63,7 +63,7 @@ const AIInsights = () => {
     try {
       // B. CALL GOOGLE GEMINI API
       // ⚠️ TODO: Replace this string with your actual API Key from Google AI Studio
-      const API_KEY = "AIzaSyDE2mo7LjfBuRxoE6ZMLH3UAsCydg_k4UQ";
+      const API_KEY = "AIzaSyDH_OHdBNzFVikmKunM9_fhFIgPDFJeyGs";
 
       const response = await fetch(
         `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`,

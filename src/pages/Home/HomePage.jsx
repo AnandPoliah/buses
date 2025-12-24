@@ -81,7 +81,6 @@ const HomePage = () => {
   };
 
   // --- FIX IS HERE ---
-  // --- FIX IS HERE ---
   const openDatePicker = (e) => {
     // Allows clicking anywhere on the container (including the input) to open the picker
     if (dateInputRef.current && dateInputRef.current.showPicker) {
@@ -103,18 +102,26 @@ const HomePage = () => {
             <span className="highlight-text">Arrive Styling.</span>
           </h1>
           <p className="hero-subtitle animate-subtitle">
-            Seamless bus booking across the nation. Experience premium travel at standard rates.
+            Seamless bus booking across the nation. Experience premium travel at
+            standard rates.
           </p>
 
           {/* SEARCH CARD */}
           <div className="search-card animate-up">
-            <form onSubmit={handleSearch} className="search-form" ref={searchBarRef}>
-              
+            <form
+              onSubmit={handleSearch}
+              className="search-form"
+              ref={searchBarRef}
+            >
               {/* SOURCE INPUT */}
               <div className="search-group">
                 <label className="search-label">From</label>
-                <div className={`input-container ${errors.source ? "error" : ""}`}>
-                  <span className="material-symbols-outlined home-input-icon">trip_origin</span>
+                <div
+                  className={`input-container ${errors.source ? "error" : ""}`}
+                >
+                  <span className="material-symbols-outlined home-input-icon">
+                    trip_origin
+                  </span>
                   <input
                     type="text"
                     placeholder="Source City"
@@ -149,19 +156,29 @@ const HomePage = () => {
               {/* DESTINATION INPUT */}
               <div className="search-group">
                 <label className="search-label">To</label>
-                <div className={`input-container ${errors.destination ? "error" : ""}`}>
-                  <span className="material-symbols-outlined home-input-icon">location_on</span>
+                <div
+                  className={`input-container ${
+                    errors.destination ? "error" : ""
+                  }`}
+                >
+                  <span className="material-symbols-outlined home-input-icon">
+                    location_on
+                  </span>
                   <input
                     type="text"
                     placeholder="Destination City"
                     value={destination}
                     onChange={(e) => {
-                      handleInputChange(setDestination, "destination", e.target.value);
+                      handleInputChange(
+                        setDestination,
+                        "destination",
+                        e.target.value
+                      );
                       setShowDestSuggestions(true);
-                       setShowSourceSuggestions(false);
+                      setShowSourceSuggestions(false);
                     }}
                     onFocus={() => setShowDestSuggestions(true)}
-                     className="search-input"
+                    className="search-input"
                   />
                   {showDestSuggestions && filteredDestinations.length > 0 && (
                     <ul className="suggestions-list">
@@ -171,7 +188,10 @@ const HomePage = () => {
                           onClick={() => {
                             setDestination(city);
                             setShowDestSuggestions(false);
-                            setErrors((prev) => ({ ...prev, destination: false }));
+                            setErrors((prev) => ({
+                              ...prev,
+                              destination: false,
+                            }));
                           }}
                         >
                           {city}
@@ -185,17 +205,18 @@ const HomePage = () => {
               {/* DATE INPUT */}
               <div className="search-group">
                 <label className="search-label">Journey Date</label>
-                <div 
+                <div
                   className={`input-container ${errors.date ? "error" : ""}`}
                   onClick={openDatePicker}
                   style={{ cursor: "pointer" }}
                 >
-                  <span className="material-symbols-outlined home-input-icon">event</span>
                   <input
                     ref={dateInputRef}
                     type="date"
                     value={date}
-                    onChange={(e) => handleInputChange(setDate, "date", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange(setDate, "date", e.target.value)
+                    }
                     min={new Date().toISOString().split("T")[0]}
                     className="search-input"
                   />
@@ -215,17 +236,23 @@ const HomePage = () => {
       <section className="features-section">
         <div className="features-container">
           <div className="feature-card">
-            <span className="material-symbols-outlined feature-icon">verified_user</span>
+            <span className="material-symbols-outlined feature-icon">
+              verified_user
+            </span>
             <h3>Safe & Secure</h3>
             <p>Verified bus operators and sanitized buses for your safety.</p>
           </div>
           <div className="feature-card">
-            <span className="material-symbols-outlined feature-icon">payments</span>
+            <span className="material-symbols-outlined feature-icon">
+              payments
+            </span>
             <h3>Best Prices</h3>
             <p>Unbeatable rates and exclusive deals on every booking.</p>
           </div>
           <div className="feature-card">
-            <span className="material-symbols-outlined feature-icon">support_agent</span>
+            <span className="material-symbols-outlined feature-icon">
+              support_agent
+            </span>
             <h3>24/7 Support</h3>
             <p>We are here to help you every step of the journey.</p>
           </div>
